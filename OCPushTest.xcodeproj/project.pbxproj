@@ -53,6 +53,7 @@
 		04B4D2A322C5E82F007DE9A9 /* OCPushTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OCPushTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04B4D2A722C5E82F007DE9A9 /* OCPushTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCPushTestUITests.m; sourceTree = "<group>"; };
 		04B4D2A922C5E82F007DE9A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04B4D2B522C5F003007DE9A9 /* OCPushTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OCPushTest.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +104,7 @@
 		04B4D27F22C5E82D007DE9A9 /* OCPushTest */ = {
 			isa = PBXGroup;
 			children = (
+				04B4D2B522C5F003007DE9A9 /* OCPushTest.entitlements */,
 				04B4D28022C5E82D007DE9A9 /* AppDelegate.h */,
 				04B4D28122C5E82D007DE9A9 /* AppDelegate.m */,
 				04B4D28322C5E82D007DE9A9 /* ViewController.h */,
@@ -202,6 +204,14 @@
 				TargetAttributes = {
 					04B4D27C22C5E82D007DE9A9 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					04B4D29722C5E82F007DE9A9 = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -439,9 +449,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = OCPushTest/OCPushTest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XSP8LJW7DB;
 				INFOPLIST_FILE = OCPushTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -456,9 +468,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = OCPushTest/OCPushTest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XSP8LJW7DB;
 				INFOPLIST_FILE = OCPushTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

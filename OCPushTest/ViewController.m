@@ -10,6 +10,8 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *lb;
+
 @end
 
 @implementation ViewController
@@ -19,5 +21,12 @@
     // Do any additional setup after loading the view.
 }
 
-
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    NSString *a = [[NSUserDefaults standardUserDefaults] valueForKey:@"a"];
+    if (a)
+    {
+        self.lb.text = a;
+    }
+}
 @end
